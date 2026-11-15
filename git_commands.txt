@@ -1,0 +1,67 @@
+
+1. git init -b main
+   Initializes a new local Git repository with main as the initial branch.
+
+2. git status
+   Displays the current state of the working directory.
+
+3. git add index.html about.html
+   Stages the HTML files for committing.
+
+4. git commit -m "Initial commit: Add website HTML files"
+   Records the initial project state.
+
+5. git add about.html
+   Stages modifications made to about.html.
+
+6. git commit -m "Update about page with additional content"
+   Saves the second version of the project.
+
+7. git branch feature
+   Creates a new branch named feature.
+
+8. git switch feature
+   Switches the working branch to feature.
+
+9. git add index.html
+   Stages changes made to index.html.
+
+10. git commit -m "Add navigation feature to home page"
+    Records the feature implementation.
+
+11. git switch main
+    Switches back to the main branch.
+
+12. git merge feature
+    Merges the feature branch into main.
+
+13. git log --oneline --graph --decorate --all
+    Displays the repository's commit history and branch structure.
+
+14. git add .gitignore
+    Stages the .gitignore file.
+
+15. git commit -m "Add gitignore for log files and temp directory"
+    Records the ignore configuration.
+
+16. git add about.html
+    Stages the additional changes to about.html.
+
+17. git commit -m "Add temporary paragraph to about page"
+    Creates an additional commit for the undo demonstration.
+
+18. git revert --no-edit HEAD
+    Reverses the latest commit while preserving repository history.
+
+19. git remote add origin <GitHub repository URL>
+    Connects the local repository to the GitHub remote.
+
+20. git push -u origin main
+    Uploads the main branch to GitHub.
+
+21. git push -u origin feature
+    Uploads the feature branch to GitHub.
+
+22. git remote -v
+    Displays the configured remote repository URLs.
+
