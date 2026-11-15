@@ -1,67 +1,83 @@
+mkdir GitWorkflowAssignment
+Creates the project directory.
 
-1. git init -b main
-   Initializes a new local Git repository with main as the initial branch.
+cd GitWorkflowAssignment
+Moves into the project directory.
 
-2. git status
-   Displays the current state of the working directory.
+cat > index.html
+Creates the homepage HTML file.
 
-3. git add index.html about.html
-   Stages the HTML files for committing.
+cat > about.html
+Creates the about page HTML file.
 
-4. git commit -m "Initial commit: Add website HTML files"
-   Records the initial project state.
+git init -b main
+Initializes a Git repository with main as the initial branch.
 
-5. git add about.html
-   Stages modifications made to about.html.
+git status
+Displays the current repository state.
 
-6. git commit -m "Update about page with additional content"
-   Saves the second version of the project.
+git add index.html about.html
+Stages the HTML files for committing.
 
-7. git branch feature
-   Creates a new branch named feature.
+git commit -m "Initial commit: Add website HTML files"
+Records the initial project version.
 
-8. git switch feature
-   Switches the working branch to feature.
+git add about.html
+Stages the modified about page.
 
-9. git add index.html
-   Stages changes made to index.html.
+git commit -m "Update about page with additional content"
+Records the second version of the project.
 
-10. git commit -m "Add navigation feature to home page"
-    Records the feature implementation.
+git branch feature
+Creates a new branch named feature.
 
-11. git switch main
-    Switches back to the main branch.
+git switch feature
+Switches to the feature branch.
 
-12. git merge feature
-    Merges the feature branch into main.
+git add index.html
+Stages the modified homepage.
 
-13. git log --oneline --graph --decorate --all
-    Displays the repository's commit history and branch structure.
+git commit -m "Add navigation feature to home page"
+Records the feature branch changes.
 
-14. git add .gitignore
-    Stages the .gitignore file.
+git switch main
+Returns to the main branch.
 
-15. git commit -m "Add gitignore for log files and temp directory"
-    Records the ignore configuration.
+git merge feature
+Merges feature branch changes into main.
 
-16. git add about.html
-    Stages the additional changes to about.html.
+git log --oneline --graph --decorate --all
+Displays commit history, branches and merge relationships.
 
-17. git commit -m "Add temporary paragraph to about page"
-    Creates an additional commit for the undo demonstration.
+git remote add origin https://github.com/Advita9/GitWorkflowAssignment.git
+Connects the local repository to GitHub.
 
-18. git revert --no-edit HEAD
-    Reverses the latest commit while preserving repository history.
+git push -u origin main
+Pushes main to GitHub and configures upstream tracking.
 
-19. git remote add origin <GitHub repository URL>
-    Connects the local repository to the GitHub remote.
+git push -u origin feature
+Pushes the feature branch to GitHub.
 
-20. git push -u origin main
-    Uploads the main branch to GitHub.
+git status --ignored
+Displays ignored files and repository status.
 
-21. git push -u origin feature
-    Uploads the feature branch to GitHub.
+git add .gitignore
+Stages the Git ignore configuration.
 
-22. git remote -v
-    Displays the configured remote repository URLs.
+git commit -m "Add gitignore for log files and temp directory"
+Records the ignore configuration.
 
+git add about.html
+Stages the temporary paragraph added to the about page.
+
+git commit -m "Add temporary paragraph to about page"
+Creates the commit used to demonstrate undo.
+
+git revert --no-edit HEAD
+Reverts the most recent commit without rewriting history.
+
+git remote -v
+Displays the configured remote repository URLs.
+
+git push origin main
+Pushes the latest main branch commits to GitHub.
